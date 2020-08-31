@@ -1,0 +1,149 @@
+.users{
+  color:white;
+  z-index: 1;
+}
+
+h1{
+  width: 2.6em;
+font-size: 100px;
+text-align: center;
+line-height: 0.8em;
+letter-spacing: -0.05em;
+color: #000;
+text-shadow: -2px -2px 0 #ff6, 2px -2px 0 #ff6, -2px 2px 0 #ff6, 2px 2px 0 #ff6;
+z-index: 1;
+}
+h1 sub{
+  
+  
+  display: block;
+font-size: 0.3em;
+letter-spacing: 0;
+line-height: 0.8em;
+}
+
+
+form{
+  width: 80%;
+  margin: 15% auto;
+  padding: 20px;
+  text-align: center;
+  color: yellow;
+  font-family: fantasy;
+  font-size: 48px;
+  display: flex;
+  flex-direction: column;
+  text-shadow: 4px 4px 4px #aaa;
+  align-items: center;
+}
+
+.sw-field{
+  color: yellow;
+  background-color: transparent;
+  border: 1px solid yellow;
+  width: 250px;
+  margin: 20px;
+  font-size: 20px;
+  line-height: 37px;
+  border-radius: 5px;
+  font-family: monospace;
+}
+
+button, button:link, button:active, button:visited{
+  color:yellow;
+  background-color: transparent;
+  border:  none;
+  width:250px;
+  border: none;
+  outline:none;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+  font-family: monospace;
+  margin-top:20px;
+}
+button:hover{
+  color:white;
+}
+
+label{
+  color:white;
+  text-shadow: none;
+  font-family: monospace;
+  font-size: 15px;
+}
+.star {
+  animation: star 10s ease-out infinite;
+}
+.wars {
+  animation: wars 10s ease-out infinite;
+}
+.byline span {
+  animation: spin-letters 10s linear infinite;
+}
+.byline {
+  animation: move-byline 10s linear infinite;
+}
+
+/* Keyframes */
+@keyframes star {
+  0% {
+    opacity: 0;
+    transform: scale(1.5) translateY(-0.75em);
+  }
+  20% {
+    opacity: 1;
+  }
+  89% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateZ(-1000em);
+  }
+}
+
+@keyframes wars {
+  0% {
+    opacity: 0;
+    transform: scale(1.5) translateY(0.5em);
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateZ(-1000em);
+  }
+}
+
+@keyframes spin-letters {
+  0%, 10% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  30% {
+    opacity: 1;
+  }
+  70%, 86% {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+  95%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes move-byline {
+  0% {
+    transform: translateZ(5em);
+  }
+  100% {
+    transform: translateZ(0);
+  }
+}
