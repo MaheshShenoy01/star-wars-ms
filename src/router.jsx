@@ -2,17 +2,17 @@ import * as React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
 
-import Landing from './Pages/Landing/landing';
+
 import Header from './../src/Components/Header/header';
 import Loader from './Components/Spinner/spinner';
 
 const LoadableHome = Loadable({
-  loader: () => import('./Pages/Home/home'),
+  loader: () => import('./Pages/Landing/landing'),
   loading: Loader,
 });
 
 const LoadablePlanetDetails = Loadable({
-  loader: () => import('./Pages/PlanetDetails/planetDetails'),
+  loader: () => import('./Pages/Home/home'),
   loading: Loader,
 });
 
@@ -23,9 +23,9 @@ class AppRouter extends React.PureComponent {
 
         <Switch>
 
-          <Route exact={true} path="/" component={Landing} />
+          <Route exact={true} path="/" component={LoadableHome} />
           <Header>
-          <Route exact={true} path="/home" component={LoadableHome} />
+          <Route exact={true} path="/home" component={LoadablePlanetDetails} />
       
           </Header>
         </Switch>
