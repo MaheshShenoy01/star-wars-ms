@@ -2,6 +2,9 @@
   "name": "starwars",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "6.13.1"
+  },
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
